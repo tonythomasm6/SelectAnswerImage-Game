@@ -1,3 +1,13 @@
+wr {
+  color: red;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+r {
+  color: green;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
 .full_body_class {
   /* display: flex;
   flex-direction: column;
@@ -160,15 +170,4 @@ button:hover {
   margin: 0 0.5rem;
   animation: bounce; /*referring directly to the animation's @keyframe declaration*/
   animation-duration: 2s; /* don't forget to set a duration! */
-}
-
-wr {
-  color: red;
-  font-weight: bold;
-  font-size: 2.5rem;
-}
-r {
-  color: green;
-  font-weight: bold;
-  font-size: 2.5rem;
 }

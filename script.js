@@ -35,29 +35,6 @@ document.getElementById("button_refresh").style.display = "block";
 const num_question = 5;
 
 /*Question and answer set*/
-
-const ques_ans1 = {
-  question: "After waking up, what should you do to have good teeth ??",
-  answer: "brushing",
-};
-const ques_ans2 = {
-  question: "Thread used to clean your teeth gaps?",
-  answer: "floss",
-};
-const ques_ans3 = {
-  question:
-    "White drink which you should have in morning, which is good for teeth?",
-  answer: "milk",
-};
-const ques_ans4 = {
-  question: "You should not have lot of these sweet items ?",
-  answer: "candy",
-};
-const ques_ans5 = {
-  question: "How many times minimum should you brush your teeth a day ?",
-  answer: "two",
-};
-
 const ques_ans_all = [
   {
     question: "After waking up, what should you do to have good teeth ??",
@@ -96,7 +73,7 @@ for (let i = 1; i <= num_question; i++) {
 /*To check if all boxes has images*/
 
 const submit = function () {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= num_question; i++) {
     const ques = "q" + i;
     const ans = "s" + i;
     if (document.getElementById(ques).getAttribute("name")) {
@@ -106,9 +83,9 @@ const submit = function () {
           .replace(/^.*[\\\/]/, "");
         let filename = fileNameExt.substring(0, fileNameExt.indexOf("."));
         if (document.getElementById(ques).getAttribute("name") == filename) {
-          alert("correct");
+          jQuery(document.getElementById(ans)).append("<r>&#x2713;</r>");
         } else {
-          alert("wrong");
+          jQuery(document.getElementById(ans)).append("<wr>&#x2717;</wr>");
         }
       });
     }
